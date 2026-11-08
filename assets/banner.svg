@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" role="img" aria-labelledby="banner-title banner-desc">
+  <title id="banner-title">Riyad Sarkar - Cybersecurity Expert and AI Expert</title>
+  <desc id="banner-desc">Animated dark navy and cyan banner with a glowing circuit shield, orbiting rings and the tagline Security research, applied AI and automation.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#030712"/>
+      <stop offset="0.55" stop-color="#07101F"/>
+      <stop offset="1" stop-color="#0B1220"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity="0.30"/>
+      <stop offset="0.55" stop-color="#0EA5E9" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#0EA5E9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="0.55" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#818CF8"/>
+    </linearGradient>
+    <linearGradient id="name-fill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F8FAFC"/>
+      <stop offset="0.72" stop-color="#E2E8F0"/>
+      <stop offset="1" stop-color="#67E8F9"/>
+    </linearGradient>
+    <linearGradient id="shield-fill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E7490" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#0891B2" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#1E293B" stop-opacity="0.55"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#164E63" stroke-width="1" opacity="0.30"/>
+      <circle cx="0" cy="0" r="1.2" fill="#22D3EE" opacity="0.35"/>
+    </pattern>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="card">
+      <rect width="1200" height="400" rx="20"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect width="1200" height="400" fill="url(#bg)"/>
+    <rect x="-48" y="-48" width="1296" height="496" fill="url(#grid)">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="48 48" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <ellipse cx="900" cy="200" rx="360" ry="320" fill="url(#halo)">
+      <animate attributeName="opacity" values="0.55;0.9;0.55" dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <rect x="0" y="-2" width="1200" height="2" fill="#22D3EE" opacity="0.35">
+      <animate attributeName="y" values="-4;402" dur="9s" repeatCount="indefinite"/>
+    </rect>
+
+    <g opacity="0.9" filter="url(#soft-glow)">
+      <rect x="78" y="48" width="8" height="8" rx="2" fill="#22D3EE">
+        <animate attributeName="opacity" values="1;0.25;1" dur="2.4s" repeatCount="indefinite"/>
+      </rect>
+      <text x="98" y="57" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" letter-spacing="2.4" fill="#67E8F9">SYSTEM ONLINE</text>
+    </g>
+    <text x="1120" y="57" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" letter-spacing="2.2" fill="#475569">SECURITY / INTELLIGENCE</text>
+
+    <text x="80" y="106" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" letter-spacing="3.4" fill="#22D3EE">// CYBERSECURITY &#215; ARTIFICIAL INTELLIGENCE</text>
+
+    <text x="80" y="184" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="64" font-weight="700" letter-spacing="2" fill="url(#name-fill)">RIYAD SARKAR</text>
+
+    <rect x="80" y="206" width="128" height="3" rx="1.5" fill="url(#accent)">
+      <animate attributeName="width" values="0;128;128" dur="2.2s" keyTimes="0;0.7;1" fill="freeze"/>
+    </rect>
+
+    <text x="80" y="252" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="500" letter-spacing="0.4" fill="#CBD5E1">Cybersecurity Expert  &#38;  AI Expert</text>
+    <text x="80" y="285" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" letter-spacing="0.2" fill="#94A3B8">Security research, applied AI, and automation systems built for the real world.</text>
+
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" letter-spacing="1.6">
+      <rect x="80" y="312" width="208" height="32" rx="6" fill="#0B1626" stroke="#155E75" opacity="0.95"/>
+      <text x="184" y="332" text-anchor="middle" fill="#67E8F9">SECURITY RESEARCH</text>
+
+      <rect x="298" y="312" width="132" height="32" rx="6" fill="#0B1626" stroke="#155E75" opacity="0.95"/>
+      <text x="364" y="332" text-anchor="middle" fill="#67E8F9">AI SYSTEMS</text>
+
+      <rect x="440" y="312" width="150" height="32" rx="6" fill="#0B1626" stroke="#155E75" opacity="0.95"/>
+      <text x="515" y="332" text-anchor="middle" fill="#67E8F9">AUTOMATION</text>
+    </g>
+
+    <g transform="translate(900 200)">
+      <circle r="168" fill="none" stroke="#22D3EE" stroke-width="1" stroke-dasharray="2 12" opacity="0.28">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="52s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="140" fill="none" stroke="#38BDF8" stroke-width="1" stroke-dasharray="40 100" opacity="0.45">
+        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="26s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="112" fill="none" stroke="#22D3EE" stroke-width="1" opacity="0.16">
+        <animate attributeName="r" values="108;122;108" dur="5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.22;0.06;0.22" dur="5s" repeatCount="indefinite"/>
+      </circle>
+
+      <g opacity="0.85">
+        <circle cx="0" cy="-140" r="3" fill="#67E8F9" filter="url(#soft-glow)">
+          <animate attributeName="opacity" values="1;0.2;1" dur="3.2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="121" cy="70" r="2.6" fill="#38BDF8" filter="url(#soft-glow)">
+          <animate attributeName="opacity" values="1;0.2;1" dur="4.1s" begin="0.8s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="-121" cy="70" r="2.6" fill="#22D3EE" filter="url(#soft-glow)">
+          <animate attributeName="opacity" values="1;0.2;1" dur="3.6s" begin="1.6s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+
+      <path d="M0 -104 L72 -74 V-4 C72 52 42 92 0 112 C-42 92 -72 52 -72 -4 V-74 Z" fill="url(#shield-fill)" stroke="#22D3EE" stroke-width="1.6" filter="url(#glow)">
+        <animate attributeName="opacity" values="0.86;1;0.86" dur="4.5s" repeatCount="indefinite"/>
+      </path>
+      <path d="M0 -82 L54 -60 V-4 C54 40 31 72 0 90 C-31 72 -54 40 -54 -4 V-60 Z" fill="#050C18" fill-opacity="0.72" stroke="#38BDF8" stroke-width="1" stroke-dasharray="3 5" opacity="0.9">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="60s" repeatCount="indefinite"/>
+      </path>
+
+      <g filter="url(#soft-glow)">
+        <rect x="-24" y="-8" width="48" height="40" rx="7" fill="#0B1626" stroke="#22D3EE" stroke-width="1.5"/>
+        <path d="M-13 -8 V-18 A13 13 0 0 1 13 -18 V-8" fill="none" stroke="#67E8F9" stroke-width="2.6" stroke-linecap="round"/>
+        <circle cx="0" cy="8" r="4.2" fill="#67E8F9">
+          <animate attributeName="opacity" values="1;0.35;1" dur="2.2s" repeatCount="indefinite"/>
+        </circle>
+        <rect x="-1.4" y="11" width="2.8" height="9" rx="1.4" fill="#67E8F9"/>
+      </g>
+
+      <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9" letter-spacing="1.4" fill="#64748B">
+        <text x="0" y="146" text-anchor="middle">ZERO TRUST / VERIFIED</text>
+      </g>
+    </g>
+
+    <g stroke="#22D3EE" stroke-width="2" fill="none" opacity="0.55">
+      <path d="M28 28 H58 M28 28 V58"/>
+      <path d="M1172 28 H1142 M1172 28 V58"/>
+      <path d="M28 372 H58 M28 372 V342"/>
+      <path d="M1172 372 H1142 M1172 372 V342"/>
+    </g>
+
+    <text x="1120" y="374" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" letter-spacing="1.8" fill="#475569">github.com/riyadsarkar07</text>
+  </g>
+
+  <rect x="0.75" y="0.75" width="1198.5" height="398.5" rx="20" fill="none" stroke="#164E63" stroke-width="1.5"/>
+  <rect x="0.75" y="0.75" width="1198.5" height="398.5" rx="20" fill="none" stroke="#22D3EE" stroke-opacity="0.25" stroke-width="3" stroke-dasharray="120 900">
+    <animate attributeName="stroke-dashoffset" from="1020" to="0" dur="12s" repeatCount="indefinite"/>
+  </rect>
+</svg>

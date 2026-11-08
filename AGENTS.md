@@ -1,34 +1,35 @@
 # Agent Instructions
 
-This repository generates a public GitHub Profile README from structured configuration and a private portrait source.
+This repository is the GitHub Profile README for Riyad Sarkar (github.com/riyadsarkar07).
 
 ## Source of Truth
 
 - Edit public profile content in `profile.config.json`.
-- Generate assets with `npm run generate -- --source /absolute/path/to/portrait.png`.
-- Do not hand-edit files in `assets/hero/`; they are generated.
-- A generated profile `README.md` contains a notice at the top. Regenerate it instead of manually changing generated sections.
+- Regenerate the README with `npm run generate`.
+- Regenerate the contribution heatmap with `npm run generate:contributions`.
+- Do not hand-edit generated sections of `README.md`; edit the config or generator instead.
+- `assets/banner.svg`, `assets/banner-mobile.svg`, `assets/footer.svg`, and `assets/divider.svg` are hand-authored brand assets. Edit them directly when changing the visual identity.
 
-## Privacy
+## Identity and Privacy
 
-- Never copy or commit the original portrait.
-- Prefer a portrait path outside the repository.
-- Only generated ASCII SVG assets may be committed.
-- Never add credentials, private email addresses, or unpublished project information to the profile without explicit approval.
+- The profile belongs to Riyad Sarkar. Never introduce another person's name, biography, links, or assets.
+- Only include links, projects, skills, and claims that are verifiable from the user's GitHub profile or public repositories.
+- Do not invent metrics, certifications, employers, or contact details.
+- Never commit credentials, private email addresses, or unpublished project information.
 
 ## Quality Checks
 
-Run these commands after changes:
+Run after changes:
 
 ```bash
 npm run check
 ```
 
-For visual changes, render and inspect desktop/mobile plus dark/light SVG variants.
+For visual changes, render the SVGs at desktop and mobile widths and inspect them in light and dark surroundings.
 
 ## GitHub Profile Constraints
 
 - Keep the hero readable at GitHub's profile width.
-- Preserve `<picture>` sources for responsive dark/light variants.
-- Keep generated activity inside its bounded marker block.
-- Use new hash-based asset filenames when the portrait or configuration changes to avoid GitHub image caching.
+- Preserve the `<picture>` sources for the responsive mobile banner.
+- Include meaningful `alt` text on every image.
+- Prefer local SVG assets over unreliable third-party widgets.

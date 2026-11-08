@@ -1,31 +1,24 @@
 {
-  "name": "github-profile-agent-console",
+  "name": "riyadsarkar07-profile",
   "version": "1.0.0",
   "private": true,
-  "description": "An animated GitHub Profile README starter kit with an ASCII portrait and AI-assisted setup.",
+  "description": "Animated GitHub Profile README for Riyad Sarkar - Cybersecurity Expert and AI Expert.",
   "type": "module",
   "engines": {
     "node": ">=20"
   },
   "scripts": {
-    "setup": "node scripts/setup.mjs",
     "generate": "node scripts/generate.mjs",
-    "generate:hero": "node scripts/generate-hero.mjs",
-    "generate:readme": "node scripts/generate-readme.mjs",
-    "generate:demo": "node scripts/generate-demo.mjs",
-    "activity": "node scripts/update-activity.mjs",
+    "generate:readme": "node scripts/generate.mjs",
+    "generate:contributions": "node scripts/generate-contributions.mjs",
     "validate": "node scripts/validate.mjs",
     "check": "npm run validate"
   },
   "keywords": [
     "github-profile",
     "readme",
-    "ascii-art",
-    "svg-animation",
-    "developer-portfolio"
+    "cybersecurity",
+    "artificial-intelligence"
   ],
-  "license": "MIT",
-  "dependencies": {
-    "sharp": "^0.34.5"
-  }
+  "license": "MIT"
 }

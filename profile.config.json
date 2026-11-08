@@ -1,77 +1,268 @@
 {
-  "$schema": "./profile.schema.json",
   "profile": {
-    "name": "Your Name",
-    "username": "yourusername",
-    "headline": "AI Engineer & Product Builder",
-    "affiliation": "Your University or Company",
-    "location": "City, Country",
-    "status": "Learning / Building / Shipping",
+    "name": "Riyad Sarkar",
+    "username": "riyadsarkar07",
+    "headline": "Cybersecurity Expert & AI Expert",
     "about": [
-      "I build practical systems at the intersection of artificial intelligence, software engineering, and products people can trust.",
-      "My work combines technical exploration with a builder mindset: understand the problem, test the system, and share what actually works."
+      "I am Riyad Sarkar, a cybersecurity and AI professional based in Bangladesh. My work sits at the intersection of defensive security, digital recovery, and applied artificial intelligence.",
+      "I study how accounts, identities, and business systems are attacked, and I build practical defenses around them. On the AI side, I work on agent platforms and automation that turn model capabilities into software people can actually use.",
+      "My public repositories document that work in progress: security-focused web applications, multi-provider AI agent platforms, and automation tooling built with Next.js, TypeScript, Supabase, and Firebase."
     ]
   },
-  "research": {
-    "primary": "AI Agents",
-    "direction": "Reliable autonomous systems",
-    "themes": "Tool use / evaluation / human control",
-    "narrative": "I am interested in systems that can observe state, use tools, evaluate outcomes, and take bounded actions with clear evidence and human oversight."
-  },
-  "focus": [
+  "identity": [
     {
-      "name": "AI Agents",
-      "description": "Autonomous workflows, tool use, evaluation, and reliable agent behavior."
+      "label": "Role",
+      "value": "Cybersecurity Expert & AI Expert"
     },
+    {
+      "label": "Focus",
+      "value": "Security research, applied AI, automation"
+    },
+    {
+      "label": "Base",
+      "value": "Bangladesh"
+    },
+    {
+      "label": "Building",
+      "value": "AI agent platforms and security-focused web systems"
+    },
+    {
+      "label": "Open source",
+      "value": "AI agents, automation, security web apps"
+    }
+  ],
+  "securityInterests": [
+    {
+      "name": "Information Security",
+      "description": "Protecting accounts, identities, and business assets with layered defensive controls."
+    },
+    {
+      "name": "Ethical Hacking",
+      "description": "Thinking like an attacker to find weaknesses before they become incidents."
+    },
+    {
+      "name": "Network Security",
+      "description": "Hardening infrastructure and monitoring threats across connected environments."
+    },
+    {
+      "name": "Web Application Security",
+      "description": "Reviewing modern web apps for authentication, authorization, and data exposure risks."
+    },
+    {
+      "name": "Vulnerability Assessment",
+      "description": "Systematic review of exposure, misconfiguration, and weakness before exploitation."
+    },
+    {
+      "name": "Security Research",
+      "description": "Studying attack patterns, recovery paths, and practical defenses for real incidents."
+    }
+  ],
+  "aiInterests": [
     {
       "name": "Applied AI",
-      "description": "Turning model capabilities into useful and testable software systems."
+      "description": "Turning model capabilities into useful, testable software systems."
     },
     {
-      "name": "Developer Tools",
-      "description": "Better workflows for building, testing, and operating modern software."
+      "name": "AI Agents",
+      "description": "Tool use, multi-provider failover, and reliable agent APIs."
+    },
+    {
+      "name": "AI Automation",
+      "description": "Connecting models to workflows, messaging platforms, and business systems."
+    },
+    {
+      "name": "LLM Engineering",
+      "description": "Streaming responses, prompt design, and API contracts for production use."
+    }
+  ],
+  "techIcons": [
+    "ts",
+    "js",
+    "python",
+    "react",
+    "nextjs",
+    "nodejs",
+    "tailwind",
+    "supabase",
+    "firebase",
+    "git",
+    "github",
+    "linux",
+    "vercel",
+    "html",
+    "css"
+  ],
+  "skillGroups": [
+    {
+      "name": "Languages",
+      "items": [
+        {
+          "label": "TypeScript",
+          "logo": "typescript"
+        },
+        {
+          "label": "JavaScript",
+          "logo": "javascript"
+        },
+        {
+          "label": "Python",
+          "logo": "python"
+        },
+        {
+          "label": "HTML",
+          "logo": "html5"
+        },
+        {
+          "label": "CSS",
+          "logo": "css3"
+        }
+      ]
+    },
+    {
+      "name": "Frameworks",
+      "items": [
+        {
+          "label": "React",
+          "logo": "react"
+        },
+        {
+          "label": "Next.js",
+          "logo": "nextdotjs"
+        },
+        {
+          "label": "Node.js",
+          "logo": "nodedotjs"
+        },
+        {
+          "label": "Tailwind CSS",
+          "logo": "tailwindcss"
+        }
+      ]
+    },
+    {
+      "name": "Data & Cloud",
+      "items": [
+        {
+          "label": "Supabase",
+          "logo": "supabase"
+        },
+        {
+          "label": "Firebase",
+          "logo": "firebase"
+        },
+        {
+          "label": "Vercel",
+          "logo": "vercel"
+        }
+      ]
+    },
+    {
+      "name": "AI Platforms",
+      "items": [
+        {
+          "label": "Google Gemini",
+          "logo": "googlegemini"
+        },
+        {
+          "label": "OpenAI",
+          "logo": "openai"
+        },
+        {
+          "label": "Anthropic",
+          "logo": "anthropic"
+        }
+      ]
     }
   ],
   "projects": [
     {
-      "name": "Project One",
-      "url": "https://github.com/yourusername/project-one",
-      "homepage": "",
-      "focus": "Primary project focus",
-      "summary": "A concise explanation of what the project does and why it matters.",
-      "heroLabel": "Primary build"
+      "name": "riyad.sarkar",
+      "url": "https://github.com/riyadsarkar07/riyad.sarkar",
+      "homepage": "https://riyadsarkar-cyber.vercel.app/",
+      "stack": "Next.js, React, TypeScript, Tailwind CSS",
+      "summary": "Animated personal portfolio presenting cybersecurity and digital recovery work, with service detail, credentials, and consultation flows."
     },
     {
-      "name": "Project Two",
-      "url": "https://github.com/yourusername/project-two",
+      "name": "Omni-Agent",
+      "url": "https://github.com/riyadsarkar07/Omni-Agent",
+      "homepage": "https://omniagent-amber.vercel.app",
+      "stack": "Next.js, TypeScript, Google Gemini, Supabase",
+      "summary": "Universal AI agent platform with a versioned REST API, streaming chat, API key management, usage analytics, and a TypeScript SDK."
+    },
+    {
+      "name": "My-Personal-Ai-Agent",
+      "url": "https://github.com/riyadsarkar07/My-Personal-Ai-Agent",
+      "homepage": "https://mypersonalaiagent.vercel.app",
+      "stack": "Next.js, TypeScript, Supabase, multi-provider AI",
+      "summary": "Nexus Agent platform for creating reusable agents across apps, with model failover, project isolation, and rate-limited API access."
+    },
+    {
+      "name": "riyad-ai-automation",
+      "url": "https://github.com/riyadsarkar07/riyad-ai-automation",
       "homepage": "",
-      "focus": "Secondary project focus",
-      "summary": "A second project that supports the professional direction of this profile.",
-      "heroLabel": "Active system"
+      "stack": "Next.js, TypeScript, Firebase, Zod",
+      "summary": "Foundation for a Facebook Messenger AI automation platform, with typed environment configuration and Firebase wiring in place."
     }
-  ],
-  "techStack": [
-    "TypeScript",
-    "Next.js",
-    "Python",
-    "PostgreSQL",
-    "Playwright"
   ],
   "links": [
     {
       "label": "GitHub",
-      "value": "yourusername",
-      "url": "https://github.com/yourusername",
+      "url": "https://github.com/riyadsarkar07",
+      "value": "riyadsarkar07",
       "logo": "github",
-      "color": "0B1220"
+      "color": "155E75"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/riyad-sarkar-6694a2180",
+      "value": "Riyad Sarkar",
+      "logo": "linkedin",
+      "color": "155E75"
+    },
+    {
+      "label": "Portfolio",
+      "url": "https://riyadsarkar-cyber.vercel.app/",
+      "value": "riyadsarkar-cyber",
+      "logo": "vercel",
+      "color": "155E75"
     }
   ],
-  "activity": {
-    "enabled": true,
-    "limit": 6
-  },
-  "appearance": {
-    "palette": "signal"
-  },
-  "footer": "Building thoughtful systems and sharing what works."
+  "footer": "Build secure systems. Explore intelligent ones.",
+  "toolGroups": [
+    {
+      "name": "Platform environments",
+      "items": [
+        "Meta",
+        "Google",
+        "Microsoft",
+        "Google Workspace"
+      ]
+    },
+    {
+      "name": "Security & infrastructure",
+      "items": [
+        "Linux",
+        "Windows",
+        "Cloudflare",
+        "AWS"
+      ]
+    },
+    {
+      "name": "Build & deploy",
+      "items": [
+        "GitHub",
+        "Vercel",
+        "Supabase",
+        "Firebase"
+      ]
+    },
+    {
+      "name": "AI platforms",
+      "items": [
+        "Google Gemini",
+        "OpenAI",
+        "Anthropic"
+      ]
+    }
+  ]
 }

@@ -29,57 +29,79 @@ function assertUrl(value, label, { allowEmpty = false } = {}) {
   }
 }
 
+function assertArray(value, label, minimum, maximum) {
+  assert(Array.isArray(value) && value.length >= minimum && value.length <= maximum, `${label} must contain ${minimum} to ${maximum} items.`);
+}
+
+function assertLabeledItems(items, label) {
+  items.forEach((item, index) => {
+    assertText(item?.label, `${label}[${index}].label`, 40);
+    assertText(item?.value ?? item?.description, `${label}[${index}].value`, 200);
+  });
+}
+
 export function validateConfig(config) {
   assert(config && typeof config === "object" && !Array.isArray(config), "the root must be an object.");
-  assert(config.profile && typeof config.profile === "object", "profile is required.");
-  assertText(config.profile.name, "profile.name", 40);
-  assertText(config.profile.username, "profile.username", 39);
-  assert(/^[A-Za-z0-9](?:[A-Za-z0-9-]{0,37}[A-Za-z0-9])?$/.test(config.profile.username), "profile.username is not a valid GitHub username.");
-  assertText(config.profile.headline, "profile.headline", 46);
-  assertText(config.profile.affiliation, "profile.affiliation", 40);
-  assertText(config.profile.location, "profile.location", 32);
-  assertText(config.profile.status, "profile.status", 42);
-  assert(Array.isArray(config.profile.about) && config.profile.about.length >= 1 && config.profile.about.length <= 3, "profile.about must contain 1 to 3 paragraphs.");
-  config.profile.about.forEach((paragraph, index) => assertText(paragraph, `profile.about[${index}]`, 320));
 
-  assert(config.research && typeof config.research === "object", "research is required.");
-  assertText(config.research.primary, "research.primary", 28);
-  assertText(config.research.direction, "research.direction", 38);
-  assertText(config.research.themes, "research.themes", 46);
-  assertText(config.research.narrative, "research.narrative", 420);
+  const profile = config.profile;
+  assert(profile && typeof profile === "object", "profile is required.");
+  assertText(profile.name, "profile.name", 40);
+  assertText(profile.username, "profile.username", 39);
+  assert(/^[A-Za-z0-9](?:[A-Za-z0-9-]{0,37}[A-Za-z0-9])?$/.test(profile.username), "profile.username is not a valid GitHub username.");
+  assertText(profile.headline, "profile.headline", 60);
+  assertArray(profile.about, "profile.about", 1, 3);
+  profile.about.forEach((paragraph, index) => assertText(paragraph, `profile.about[${index}]`, 360));
 
-  assert(Array.isArray(config.focus) && config.focus.length >= 1 && config.focus.length <= 6, "focus must contain 1 to 6 items.");
-  config.focus.forEach((item, index) => {
-    assertText(item?.name, `focus[${index}].name`, 28);
-    assertText(item?.description, `focus[${index}].description`, 180);
+  assertArray(config.identity, "identity", 1, 6);
+  assertLabeledItems(config.identity, "identity");
+
+  for (const section of ["securityInterests", "aiInterests"]) {
+    assertArray(config[section], section, 1, 8);
+    config[section].forEach((item, index) => {
+      assertText(item?.name, `${section}[${index}].name`, 40);
+      assertText(item?.description, `${section}[${index}].description`, 200);
+    });
+  }
+
+  assertArray(config.techIcons, "techIcons", 1, 24);
+  config.techIcons.forEach((icon, index) => assertText(icon, `techIcons[${index}]`, 30));
+
+  assertArray(config.skillGroups, "skillGroups", 1, 8);
+  config.skillGroups.forEach((group, index) => {
+    assertText(group?.name, `skillGroups[${index}].name`, 40);
+    assertArray(group?.items, `skillGroups[${index}].items`, 1, 12);
+    group.items.forEach((item, itemIndex) => {
+      assertText(item?.label, `skillGroups[${index}].items[${itemIndex}].label`, 40);
+      assertText(item?.logo, `skillGroups[${index}].items[${itemIndex}].logo`, 40);
+    });
   });
 
-  assert(Array.isArray(config.projects) && config.projects.length >= 1 && config.projects.length <= 6, "projects must contain 1 to 6 items.");
+  assertArray(config.toolGroups, "toolGroups", 1, 6);
+  config.toolGroups.forEach((group, index) => {
+    assertText(group?.name, `toolGroups[${index}].name`, 40);
+    assertArray(group?.items, `toolGroups[${index}].items`, 1, 12);
+    group.items.forEach((item, itemIndex) => assertText(item, `toolGroups[${index}].items[${itemIndex}]`, 40));
+  });
+
+  assertArray(config.projects, "projects", 1, 6);
   config.projects.forEach((project, index) => {
-    assertText(project?.name, `projects[${index}].name`, 18);
+    assertText(project?.name, `projects[${index}].name`, 40);
     assertUrl(project?.url, `projects[${index}].url`);
     assertUrl(project?.homepage ?? "", `projects[${index}].homepage`, { allowEmpty: true });
-    assertText(project?.focus, `projects[${index}].focus`, 44);
-    assertText(project?.summary, `projects[${index}].summary`, 220);
-    assertText(project?.heroLabel, `projects[${index}].heroLabel`, 30);
+    assertText(project?.stack, `projects[${index}].stack`, 160);
+    assertText(project?.summary, `projects[${index}].summary`, 260);
   });
 
-  assert(Array.isArray(config.techStack) && config.techStack.length >= 1 && config.techStack.length <= 18, "techStack must contain 1 to 18 items.");
-  config.techStack.forEach((item, index) => assertText(item, `techStack[${index}]`, 30));
-
-  assert(Array.isArray(config.links) && config.links.length >= 1 && config.links.length <= 4, "links must contain 1 to 4 items.");
+  assertArray(config.links, "links", 1, 4);
   config.links.forEach((link, index) => {
-    assertText(link?.label, `links[${index}].label`, 14);
-    assertText(link?.value, `links[${index}].value`, 28);
+    assertText(link?.label, `links[${index}].label`, 20);
+    assertText(link?.value, `links[${index}].value`, 40);
     assertUrl(link?.url, `links[${index}].url`);
     assert(typeof link?.logo === "string" && link.logo.length <= 30, `links[${index}].logo must be 30 characters or fewer.`);
     assert(/^[A-Fa-f0-9]{6}$/.test(link?.color), `links[${index}].color must be a six-character hex value without #.`);
   });
 
-  assert(config.activity && typeof config.activity.enabled === "boolean", "activity.enabled must be true or false.");
-  assert(Number.isInteger(config.activity.limit) && config.activity.limit >= 1 && config.activity.limit <= 10, "activity.limit must be between 1 and 10.");
-  assert(["signal", "ocean", "solar"].includes(config.appearance?.palette), "appearance.palette must be signal, ocean, or solar.");
-  assertText(config.footer, "footer", 120);
+  assertText(config.footer, "footer", 140);
 
   return config;
 }

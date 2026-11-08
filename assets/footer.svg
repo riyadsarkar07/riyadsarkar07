@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 140" width="1200" height="140" role="img" aria-labelledby="footer-title footer-desc">
+  <title id="footer-title">Riyad Sarkar - Build secure systems, explore intelligent ones</title>
+  <desc id="footer-desc">Animated closing banner with a moving cyan signal line and a cybersecurity and AI closing statement.</desc>
+
+  <defs>
+    <linearGradient id="footer-bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#030712"/>
+      <stop offset="0.5" stop-color="#07101F"/>
+      <stop offset="1" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="footer-line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#818CF8" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="footer-glow" x="-50%" y="-300%" width="200%" height="700%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="140" rx="16" fill="url(#footer-bg)"/>
+  <rect x="0.75" y="0.75" width="1198.5" height="138.5" rx="16" fill="none" stroke="#164E63"/>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" letter-spacing="2.4" fill="#475569">
+    <text x="60" y="44">// CLOSING SIGNAL</text>
+    <text x="1140" y="44" text-anchor="end">riyadsarkar07</text>
+  </g>
+
+  <text x="600" y="82" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="26" font-weight="600" letter-spacing="1.2" fill="#E2E8F0">Build secure systems. Explore intelligent ones.</text>
+  <text x="600" y="108" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" letter-spacing="2.6" fill="#67E8F9">CYBERSECURITY &#215; ARTIFICIAL INTELLIGENCE</text>
+
+  <line x1="60" y1="124" x2="1140" y2="124" stroke="#0E4A5C" stroke-width="1"/>
+  <line x1="60" y1="124" x2="240" y2="124" stroke="url(#footer-line)" stroke-width="2" filter="url(#footer-glow)">
+    <animate attributeName="x1" values="60;960;60" dur="10s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="240;1140;240" dur="10s" repeatCount="indefinite"/>
+  </line>
+  <circle cx="600" cy="124" r="2.4" fill="#22D3EE" filter="url(#footer-glow)">
+    <animate attributeName="opacity" values="1;0.2;1" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+</svg>
